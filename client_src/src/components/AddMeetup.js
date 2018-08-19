@@ -7,7 +7,7 @@ class AddMeetup extends Component {
 addMeetup(newMeetup) {
   axios.request({
     method: 'post',
-    url:'http://localhost:3000/api/meetups',
+    url:'http://35.237.67.142/api/meetups',
     data: newMeetup
   })
   .then(response => {

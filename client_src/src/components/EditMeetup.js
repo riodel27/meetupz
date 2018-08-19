@@ -21,7 +21,7 @@ componentWillMount() {
 }
 getMeetupDetails() {
   let meetupId = this.props.match.params.id;
-  axios.get(`http://localhost:3000/api/meetups/${meetupId}`)
+  axios.get(`http://35.237.67.142/api/meetups/${meetupId}`)
     .then(response => {
       this.setState({
         id: response.data.id,
@@ -37,7 +37,7 @@ getMeetupDetails() {
   editMeetup(newMeetup) {
     axios.request({
         method: 'put',
-        url: `http://localhost:3000/api/meetups/${this.state.id}`,
+        url: `http://35.237.67.142/api/meetups/${this.state.id}`,
         data: newMeetup
       }).then(response => {
         this.props.history.push('/');
